@@ -31,7 +31,7 @@ const createTile = (type?: number): Tile => {
  * Creates a new game board.
  */
 export const createBoard = (): Board => {
-  const board: Board = [];
+  let board: Board = [];
   for (let row = 0; row < BOARD_SIZE; row++) {
     board[row] = [];
     for (let col = 0; col < BOARD_SIZE; col++) {
@@ -50,6 +50,10 @@ export const createBoard = (): Board => {
 
 const areTilesEqual = (tile1: Tile, tile2: Tile) => {
   return tile1.type === tile2.type;
+}
+
+const deepCopyBoard = (board: Board): Board => {
+    return board.map(row => [...row]);
 }
 
 export const checkMatches = (board: Board): Coords[] => {
@@ -83,7 +87,7 @@ export const checkMatches = (board: Board): Coords[] => {
 };
 
 export const swapTiles = (board: Board, from: Coords, to: Coords): Board => {
-  const newBoard = [...board];
+  const newBoard = deepCopyBoard(board);
   const temp = newBoard[from.row][from.col];
   newBoard[from.row][from.col] = newBoard[to.row][to.col];
   newBoard[to.row][to.col] = temp;
@@ -95,7 +99,7 @@ export const getScore = (matches: Coords[]): number => {
 }
 
 export const removeMatches = (board: Board, matches: Coords[]): Board => {
-  const newBoard = [...board];
+  const newBoard = deepCopyBoard(board);
   matches.forEach(match => {
     newBoard[match.row][match.col] = null;
   });
@@ -103,7 +107,7 @@ export const removeMatches = (board: Board, matches: Coords[]): Board => {
 }
 
 export const fillBoard = (board: Board): Board => {
-  const newBoard = [...board];
+  const newBoard = deepCopyBoard(board);
   // Drop tiles down
   for (let col = 0; col < BOARD_SIZE; col++) {
     let emptyRow = BOARD_SIZE - 1;
