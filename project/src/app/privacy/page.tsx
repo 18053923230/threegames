@@ -12,10 +12,10 @@ const PrivacyPage: React.FC = () => {
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold font-lobster text-red-500 mb-4">Privacy Policy</h1>
       <p className="text-lg">
-        Your privacy is important to us. It is Couple's Match's policy to respect your privacy regarding any information we may collect from you across our website.
+        Your privacy is important to us. It is Couple&apos;s Match&apos;s policy to respect your privacy regarding any information we may collect from you across our website.
       </p>
       <p className="text-lg mt-4">
-        We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.
+        We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we&apos;re collecting it and how it will be used.
       </p>
       <p className="text-lg mt-4">
         We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.

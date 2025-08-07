@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="text-xl font-semibold text-gray-700">
             <Link href="/" className="text-red-500 font-lobster text-3xl">
-              Couple's Match
+              Couple&apos;s Match
             </Link>
           </div>
           <div className="flex items-center">

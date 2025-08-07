@@ -40,7 +40,7 @@ const GameBoard: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center mt-8">
-        <h1 className="text-6xl font-lobster text-red-500 mb-4">Couple's Match</h1>
+        <h1 className="text-6xl font-lobster text-red-500 mb-4">Couple&apos;s Match</h1>
       <Score score={score} />
       <div className="grid grid-cols-8 gap-1 bg-pink-200 p-4 rounded-lg shadow-lg">
         {board.map((row, rowIndex) =>
